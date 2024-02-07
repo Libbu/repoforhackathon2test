@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Rock Paper Scissors Lizard Spock</title>
+</head>
+
+<body>
+
+    <div class="flex-column main-container">
+        <!--title section-->
+        <section class="title-block">
+            <ul>
+                <li>Rock</li>
+                <li>Paper</li>
+                <li>Scissors</li>
+                <li>Lizard</li>
+                <li>Spock</li>
+            </ul>
+            <div class="score flex-column">
+                <div class="score-title">Player</div>
+                <div id = "score" class="score-count">0</div>
+            </div>
+            <div class="score flex-column">
+                <div class="score-title">Sheldon</div>
+                <div id = "sheldon-score" class="score-count">0</div>
+            </div>
+            <div class="score flex-column">
+                <div class="score-title">Round</div>
+                <div id = "round" class="score-count">0</div>
+            </div>
+        </section>
+
+        <!--game section-->
+
+        <section class="user-choice">
+            <div class="game-card scissors"><img src="assets/images/icon-scissors.svg" alt="scissors"></div>
+            <div class="game-card paper"><img src="assets/images/icon-paper.svg" alt="paper"></div>
+            <div class="game-card rock"><img src="assets/images/icon-rock.svg" alt="rock"></div>
+            <div class="game-card lizard"><img src="assets/images/icon-lizard.svg" alt="lizard"></div>
+            <div class="game-card spock"><img src="assets/images/icon-spock.svg" alt="spock"></div>
+        </section>
+
+        <!-- outcome section-->
+
+        <div class="section picked flex-row hidden">
+            <div class="choice flex-column">
+                <h4>You Picked</h4>
+                <div class="user-pick"></div>
+            </div>
+            <div class="result">
+                <div class="title">You Lose</div>
+                <button class ="btnunhide">Play again</button>
+            </div>
+            <div class="choice flex-column">
+                <h4>Sheldon Picked</h4>
+                <div class="sheldon-pick"></div>
+            </div>
+            <button class="reset-btn">Reset game</button>
+        </div>
+
+        <!--attempt at ultimatevictory-->
+
+        <div class = "player-ultimate-win hidden"> <p>Ultimate Victory Reached Player</p> </div>
+        <div class = "sheldon-ultimate-win hidden"> <p>Ulimate Victory Reached Sheldon </p></div>
+
+        <!--rules button-->
+
+        <button class="rules-btn">How to play</button>
+        
+
+        <!-- modal section-->
+        <div class="modal-bg"></div>
+        <div class="modal">
+            <span class="close">
+                <img src="assets/images/icon-close.svg" alt="close">
+            </span>
+            <h2 class="title">How to Play</h2>
+            <div class="content">
+                <img src="assets/images/image-rules-bonus.svg" alt="rules">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="assets/java/script.js"></script>
+</body>
+
+</html>
