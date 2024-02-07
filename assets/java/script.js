@@ -45,26 +45,22 @@ function game() {
     function getSheldonChoice() {
         return choices[Math.floor(Math.random() * 5)];
     }
-
+//this function calculates the winner in each round
     function calculateWinner(usercard, sheldoncard) {
         if (usercard === sheldoncard) {
-            console.log('tie');
+            resultTitleElement.innerText = "I don't need sleep, I need answers";
         } else if (getUserWinsStatus(usercard + sheldoncard)) {
-            console.log('You Win');
+            resultTitleElement.innerText = "Alright, I'll bow to social pressure";
         } else {
-            console.log('you lose');
+            resultTitleElement.innerText = 'bazinga';
         }
 
     }
 
-
-
     function getUserWinsStatus(result) {
         return userWinResults.some(winStr => winStr === result);
-
-
     }
-    
+
 //function that builds user and sheldon choice elements using classname, function will need editing when images are added
 
     function buildChoiceElement (isItUserElement, className) {
