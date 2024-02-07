@@ -7,6 +7,10 @@ function game() {
 
     const userChoiceElement = document.querySelector('.user-choice');
     const pickedElement = document.querySelector('.picked');
+    const userPickedElement = document.querySelector('.user-pick');
+    const sheldonPickedElement = document.querySelector ('.sheldon-pick')
+    const resultElement = document.querySelector('.result');
+    const resultTitleElement = resultElement.querySelector('.title');
 
 
 
@@ -26,6 +30,8 @@ function game() {
         calculateWinner(userChoice, sheldonChoice)
         userChoiceElement.classList.add('hidden');
         pickedElement.classList.remove('hidden')
+        buildChoiceElement(true, userChoice);
+        buildChoiceElement(false, sheldonChoice);
     }
 
     function getUserChoice(target) {
@@ -51,9 +57,26 @@ function game() {
 
     }
 
+
+
     function getUserWinsStatus(result) {
         return userWinResults.some(winStr => winStr === result);
 
+
+    }
+    
+//function that builds user and sheldon choice elements using classname, function will need editing when images are added
+
+    function buildChoiceElement (isItUserElement, className) {
+        const choiceElement = document.createElement ('div');
+        choiceElement.classList = [`game-card ${className}`];
+        choiceElement.innerHTML = `${className}`;
+        if(isItUserElement) {
+            userPickedElement.append(choiceElement);
+        } else { 
+            sheldonPickedElement.append(choiceElement)
+
+        }
 
     }
 
