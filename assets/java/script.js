@@ -28,7 +28,7 @@ function game() {
         if (target.nodeName === "BUTTON") {
             //console.log( target.parentElement.classList[1]);//
         }
-        console.log(target.classList[1]);
+        return (target.classList[1]);
     }
 
     function getSheldonChoice() {
