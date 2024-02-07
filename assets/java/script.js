@@ -5,6 +5,9 @@ function game() {
     let userChoice = '';
     let sheldonChoice = '';
 
+    const userChoiceElement = document.querySelector('.user-choice');
+    const pickedElement = document.querySelector('.picked');
+
 
 
     window.addEventListener('load', () => {
@@ -21,6 +24,8 @@ function game() {
 
     function startGame() {
         calculateWinner(userChoice, sheldonChoice)
+        userChoiceElement.classList.add('hidden');
+        pickedElement.classList.remove('hidden')
     }
 
     function getUserChoice(target) {
