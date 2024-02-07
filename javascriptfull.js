@@ -117,7 +117,7 @@ function game() {
         sheldonPickedElement.innerHTML = '';
     }
 
-    //adds to the player score when the player winns a round 
+    //adds to the player score when the player wins a round 
     function incrementScore() {
 
         let oldScore = parseInt(document.getElementById('score').innerText);
